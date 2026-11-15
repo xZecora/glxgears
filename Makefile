@@ -7,7 +7,7 @@ glxgears: glxgears.o
 
 install: glxgears.o
 	mkdir bin
-	mv ./glxgears ./bin/glxgears
+	mv ./glxgears $(DESTDIR)/bin/glxgears
 
 glxgears.o: glxgears.c
 	$(CC) -c -o $@ $< $(CFLAGS) -MT $< -MD -MP -MF glxgears.Tpo
