@@ -5,7 +5,7 @@ LFLAGS = -lGL -lGLEW -lGLU -lGL -lm -lX11 -lXext
 glxgears: glxgears.o
 	$(CC) -o $@ $^ $(CFLAGS) $(LFLAGS)
 
-install: glxgears.o
+install: glxgears
 	mkdir $(DESTDIR)/bin -p
 	mv ./glxgears $(DESTDIR)/bin/glxgears
 
