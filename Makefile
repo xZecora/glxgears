@@ -6,7 +6,7 @@ glxgears: glxgears.o
 	$(CC) -o $@ $^ $(CFLAGS) $(LFLAGS)
 
 install: glxgears.o
-	mkdir $(DESTDIR) -p
+	mkdir $(DESTDIR)/bin -p
 	mv ./glxgears $(DESTDIR)/bin/glxgears
 
 glxgears.o: glxgears.c
