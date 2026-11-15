@@ -6,8 +6,10 @@ glxgears: glxgears.o
 	$(CC) -o $@ $^ $(CFLAGS) $(LFLAGS)
 
 install: glxgears
+	echo Making install directory...
 	mkdir $(DESTDIR)/bin -p
-	mv ./glxgears $(DESTDIR)/bin/glxgears
+	echo Copying executable
+	cp ./glxgears $(DESTDIR)/bin/glxgears
 
 glxgears.o: glxgears.c
 	$(CC) -c -o $@ $< $(CFLAGS) -MT $< -MD -MP -MF glxgears.Tpo
