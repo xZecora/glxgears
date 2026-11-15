@@ -6,7 +6,8 @@ glxgears: glxgears.o
 	$(CC) -o $@ $^ $(CFLAGS) $(LFLAGS)
 
 install: glxgears.o
-	mv ./glxgears /usr/bin/glxgears
+	mkdir bin
+	mv ./glxgears ./bin/glxgears
 
 glxgears.o: glxgears.c
 	$(CC) -c -o $@ $< $(CFLAGS) -MT $< -MD -MP -MF glxgears.Tpo
